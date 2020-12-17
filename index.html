@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw-12</title>
+</head>
+
+<body>
+    <script>
+        /* sum */
+        function sum() {
+            let accumulator = 0;
+            return function (value) {
+                return accumulator += value;
+            }
+        }
+        /* counter */
+        function count(initialValue = 0, stepValue = 1) {
+            let counter = initialValue;
+            let step = stepValue;
+            return function (resetCounter) {
+                return resetCounter ? counter = initialValue : counter += step;
+            }
+        }
+    </script>
+</body>
+
+</html>
